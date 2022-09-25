@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>CommandsGenerator</title>
+</head>
+<body>
+<h1>Command Generator</h1>
+<br>
+<h2>effect command</h2>
+<form>
+  <script src="scripts/effect.js"></script>
+  <link href="scripts/button.css" rel="stylesheet" type="text/css" media="all">
+  <table>
+    <table class="command-table">
+      <tr style="border-bottom: 1px solid white;">
+        <th style="border-style: none;">プレイヤー</th>
+        <td style="border-style: none;">
+          <label>
+            <input class="command-input"
+                   type="text"
+                   id="input1"
+                   value="@p"
+                   placeholder="必須">
+          </label>
+        </td>
+      </tr>
+      <tr style="border-bottom: 1px solid white;">
+        <th style="border-style: none;">効果</th>
+        <td style="border-style: none;">
+          <label>
+            <select class="command-input"
+                    size="1"
+                    id="input2"
+                    style="padding: 1px 0;">
+              <option value="minecraft:speed">移動速度</option>
+              <option value="minecraft:slowness">移動速度低下</option>
+              <option value="minecraft:haste">採掘速度上昇</option>
+              <option value="minecraft:mining_fatigue">採掘速度低下</option>
+              <option value="minecraft:strength">攻撃力上昇</option>
+              <option value="minecraft:instant_health">即時回復</option>
+              <option value="minecraft:instant_damage">即時ダメージ</option>
+              <option value="minecraft:jump_boost">跳躍力上昇</option>
+              <option value="minecraft:nausea">吐き気</option>
+              <option value="minecraft:regeneration">再生能力</option>
+              <option value="minecraft:resistance">耐性</option>
+              <option value="minecraft:fire_resistance">火炎耐性</option>
+              <option value="minecraft:water_breathing">水中呼吸</option>
+              <option value="minecraft:invisibility">透明化</option>
+              <option value="minecraft:blindness">盲目</option>
+              <option value="minecraft:night_vision">暗視</option>
+              <option value="minecraft:hunger">空腹</option>
+              <option value="minecraft:weakness">弱体化</option>
+              <option value="minecraft:poison">毒</option>
+              <option value="minecraft:wither">衰退</option>
+              <option value="minecraft:health_boost">体力増加</option>
+              <option value="minecraft:absorption">衝撃吸収</option>
+              <option value="minecraft:saturation">満腹度回復</option>
+              <option value="minecraft:glowing">発光</option>
+              <option value="minecraft:levitation">浮遊</option>
+              <option value="minecraft:luck">幸運</option>
+              <option value="minecraft:unluck">不運</option>
+              <option value="minecraft:slow_falling">低速落下</option>
+              <option value="minecraft:conduit_power">コンジットパワー</option>
+              <option value="minecraft:dolphins_grace">イルカの好意</option>
+              <option value="minecraft:bad_omen">不吉な予感</option>
+              <option value="minecraft:hero_of_the_village">村の英雄</option>
+            </select>
+          </label>
+        </td>
+      </tr>
+      <tr style="border-bottom: 1px solid white;">
+        <th style="border-style: none;">秒数</th>
+        <td style="border-style: none;">
+          <label>
+            <input class="command-input"
+                   type="number"
+                   id="input3"
+                   size="15"
+                   value="10"
+                   placeholder="未設定">
+          </label>
+        </td>
+      </tr>
+      <tr style="border-bottom: 1px solid white;">
+        <th style="border-style: none;">レベル</th>
+        <td style="border-style: none;">
+          <label>
+            <input class="command-input"
+                   type="number"
+                   id="input4"
+                   size="15"
+                   value="1"
+                   placeholder="未設定">
+          </label>
+        </td>
+      </tr>
+      <tr style="border-bottom: 1px solid white;">
+        <th style="border-style: none;">パーティクル</th>
+        <td style="border-style: none;">
+          <label>
+            <select class="command-input"
+                    size="1"
+                    id="input5"
+                    style="padding: 1px 0;">
+              <option value="false">表示</option>
+              <option value="true">非表示</option>
+            </select>
+          </label>
+        </td>
+      </tr>
+    </table>
+  </table>
+  <label for="cmdOutput">
+  </label>
+  <textarea id="cmdOutput"
+            readonly
+            rows="5"
+            style="width:100%;">
+  </textarea>
+  <script src="scripts/utils.js"></script>
+  <input class="cmdButton--gen"
+         type="button"
+         id="generate"
+         onclick="effectCommandGenerate()"
+         value="コマンド生成">&nbsp;&nbsp;
+  <input class="cmdButton--copy"
+         type="button"
+         id="copy"
+         onclick="copyClipboad(document.getElementById('cmdOutput'))"
+         value="コマンドコピー">
+</form>
+</body>
+</html>

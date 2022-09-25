@@ -1,0 +1,12 @@
+.cmdButton--gen,
+form.cmdButton--gen {
+    color: #fff;
+    background-color: #eb6100;
+    border-radius: 50px;
+}
+.cmdButton--copy,
+form.cmdButton--copy {
+    color: #fff;
+    background: #f56500;
+    border-radius: 50px;
+}
