@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1>Command Generator</h1>
+<h2>Enchant command</h2>
+<form name="form">
+  <!--  <b style="background-color:gainsboro">1.基本設定</b><br>-->
+  <table class="command-table">
+    <tr style="border-bottom: 1px solid white;">
+      <th style="border-style: none;">プレイヤー</th>
+      <td style="border-style: none;">
+        <label for="input1_1"></label>
+        <input class="command-input" type="text"
+               id="input1_1" value="@s"
+               placeholder="必須"></td>
+    </tr>
+    <tr style="border-bottom: 1px solid white;">
+      <th style="border-style: none;">アイテム</th>
+      <td style="border-style: none;">
+        <label>
+          <select class="command-input" size="1" id="input2" style="padding: 1px 1px;">
+            <option value="minecraft:golden_sword">金の剣</option>
+            <option value="minecraft:wooden_sword">木の剣</option>
+            <option value="minecraft:stone_sword">石の剣</option>
+            <option value="minecraft:iron_sword">鉄の剣</option>
+            <option value="minecraft:diamond_sword">ダイヤモンドの剣</option>
+            <option value="minecraft:netherite_sword">[1.16]ネザライトの剣</option>
+            <option value="minecraft:golden_axe">金の斧</option>
+            <option value="minecraft:wooden_axe">木の斧</option>
+            <option value="minecraft:stone_axe">石の斧</option>
+            <option value="minecraft:iron_axe">鉄の斧</option>
+            <option value="minecraft:diamond_axe">ダイヤモンドの斧</option>
+            <option value="minecraft:netherite_axe">[1.16]ネザライトの斧</option>
+            <option value="minecraft:golden_pickaxe">金のツルハシ</option>
+            <option value="minecraft:wooden_pickaxe">木のツルハシ</option>
+            <option value="minecraft:stone_pickaxe">石のツルハシ</option>
+            <option value="minecraft:iron_pickaxe">鉄のツルハシ</option>
+            <option value="minecraft:diamond_pickaxe">ダイヤモンドのツルハシ</option>
+            <option value="minecraft:netherite_pickaxe">[1.16]ネザライトのツルハシ</option>
+            <option value="minecraft:golden_shovel">金のシャベル</option>
+            <option value="minecraft:wooden_shovel">木のシャベル</option>
+            <option value="minecraft:stone_shovel">石のシャベル</option>
+            <option value="minecraft:iron_shovel">鉄のシャベル</option>
+            <option value="minecraft:diamond_shovel">ダイヤモンドのシャベル</option>
+            <option value="minecraft:netherite_shovel">[1.16]ネザライトのシャベル</option>
+            <option value="minecraft:golden_hoe">金のクワ</option>
+            <option value="minecraft:wooden_hoe">木のクワ</option>
+            <option value="minecraft:stone_hoe">石のクワ</option>
+            <option value="minecraft:iron_hoe">鉄のクワ</option>
+            <option value="minecraft:diamond_hoe">ダイヤモンドのクワ</option>
+            <option value="minecraft:netherite_hoe">[1.16]ネザライトのクワ</option>
+            <option value="minecraft:bow">弓</option>
+            <option value="minecraft:golden_helmet">金のヘルメット</option>
+            <option value="minecraft:leather_helmet">革の帽子</option>
+            <option value="minecraft:chainmail_helmet">チェーンヘルメット</option>
+            <option value="minecraft:iron_helmet">鉄のヘルメット</option>
+            <option value="minecraft:diamond_helmet">ダイヤのヘルメット</option>
+            <option value="minecraft:netherite_helmet">[1.16]ネザライトのヘルメット</option>
+            <option value="minecraft:golden_chestplate">金のチェストプレート</option>
+            <option value="minecraft:leather_chestplate">革の上着</option>
+            <option value="minecraft:chainmail_chestplate">チェーンチェストプレート</option>
+            <option value="minecraft:iron_chestplate">鉄のチェストプレート</option>
+            <option value="minecraft:diamond_chestplate">ダイヤのチェストプレート</option>
+            <option value="minecraft:netherite_chestplate">[1.16]ネザライトのチェストプレート</option>
+            <option value="minecraft:golden_leggings">金のレギンス</option>
+            <option value="minecraft:leather_leggings">革のズボン</option>
+            <option value="minecraft:chainmail_leggings">チェーンレギンス</option>
+            <option value="minecraft:iron_leggings">鉄のレギンス</option>
+            <option value="minecraft:diamond_leggings">ダイヤのレギンス</option>
+            <option value="minecraft:netherite_leggings">[1.16]ネザライトのレギンス</option>
+            <option value="minecraft:golden_boots">金のブーツ</option>
+            <option value="minecraft:leather_boots">革のブーツ</option>
+            <option value="minecraft:chainmail_boots">チェーンブーツ</option>
+            <option value="minecraft:iron_boots">鉄のブーツ</option>
+            <option value="minecraft:diamond_boots">ダイヤのブーツ</option>
+            <option value="minecraft:netherite_boots">[1.16]ネザライトのブーツ</option>
+            <option value="minecraft:shield">盾</option>
+            <option value="minecraft:fishing_rod">釣り竿</option>
+            <option value="minecraft:shears">ハサミ</option>
+            <option value="minecraft:enchanted_book">エンチャントの本</option>
+            <option value="minecraft:elytra">エリトラ</option>
+            <option value="minecraft:trident">[1.13]トライデント</option>
+            <option value="minecraft:turtle_helmet">[1.13]カメの甲羅</option>
+            <option value="minecraft:crossbow">[1.14]クロスボウ</option>
+            <option value="minecraft:flint_and_steel">火打石と打ち金</option>
+          </select>
+        </label>
+      </td>
+    </tr>
+    <tr style="border-bottom: 1px solid white;">
+      <th style="border-style: none;">新しい名前</th>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="text" name="input3" value=""
+               placeholder="未設定">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid white;">
+      <th style="border-style: none;">説明文</th>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="text" name="input4" value=""
+               placeholder="未設定">
+      </label></td>
+    </tr>
+  </table>
+  <table class="command-table">
+    <tr style="border-bottom: 1px solid white;">
+      <th style="border-style: none;">色</th>
+      <td style="border-style: none;padding:5px;"><label>
+        <input type="checkbox" name="input8" value="1">
+      </label>:<label>
+        <input
+            type="color" name="input9" size="15" value="@p">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid white;">
+      <th style="border-style: none;">不可壊</th>
+      <td style="border-style: none;"><label>
+        <input type="radio" name="input5" value="true">
+      </label>ON　<label>
+        <input type="radio"
+               name="input5"
+               value="false"
+               checked>
+      </label>OFF
+      </td>
+    </tr>
+    <tr style="border-bottom: 1px solid white;">
+      <th style="border-style: none;">個数</th>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" min="1" max="64"
+               name="input7" value="" placeholder="未設定">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid white;">
+      <th style="border-style: none;">耐久値ダメージ</th>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" min="0" name="input6"
+               value="" placeholder="未設定">
+      </label></td>
+    </tr>
+  </table>
+  <br clear="all">
+  <b style="background-color:gainsboro">2.エンチャント設定</b><br>
+  <table class="free-table" style="margin-right:15px; table-layout: fixed;width:220px;">
+    <tr style="border-bottom: 1px solid silver;">
+      <th style="border-style: none; width:150px;"><strong>エンチャント</strong></th>
+      <th style="border-style: none; width:70px;"><strong>レベル</strong></th>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="protection">
+      </label>ダメージ軽減
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="fire_protection">
+      </label>火炎耐性
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="feather_falling">
+      </label>落下耐性
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="blast_protection">
+      </label>爆発耐性
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="projectile_protection">
+      </label>飛び道具耐性
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="respiration">
+      </label>水中呼吸
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="aqua_affinity">
+      </label>水中採掘
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="thorns">
+      </label>棘の鎧
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="depth_strider">
+      </label>水中歩行
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="frost_walker">
+      </label>氷渡り
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+  </table>
+  <table class="free-table" style="margin-right:15px; table-layout: fixed;width:220px;">
+    <tr style="border-bottom: 1px solid silver;">
+      <th style="border-style: none; width:150px;"><strong>エンチャント</strong></th>
+      <th style="border-style: none; width:70px;"><strong>レベル</strong></th>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="binding_curse">
+      </label>束縛の呪い
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="sharpness">
+      </label>ダメージ増加
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="smite">
+      </label>アンデット特効
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="bane_of_arthropods">
+      </label>虫特効
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="knockback">
+      </label>ノックバック
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="fire_aspect">
+      </label>火属性
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="looting">
+      </label>ドロップ増加
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="sweeping">
+      </label>範囲ダメージ増加
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="efficiency">
+      </label>効率強化
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="silk_touch">
+      </label>シルクタッチ
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+  </table>
+  <table class="free-table" style="margin-right:15px; table-layout: fixed;width:220px;">
+    <tr style="border-bottom: 1px solid silver;">
+      <th style="border-style: none; width:150px;"><strong>エンチャント</strong></th>
+      <th style="border-style: none; width:70px;"><strong>レベル</strong></th>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="unbreaking">
+      </label>耐久力
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="fortune">
+      </label>幸運
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="power">
+      </label>射撃ダメージ増加
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="punch">
+      </label>パンチ
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="flame">
+      </label>フレイム
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="infinity">
+      </label>無限
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="luck_of_the_sea">
+      </label>宝釣り
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="lure">
+      </label>入れ食い
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="mending">
+      </label>修繕
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="vanishing_curse">
+      </label>消滅の呪い
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+  </table>
+  <table class="free-table" style="margin-right:15px; table-layout: fixed;width:220px;">
+    <tr style="border-bottom: 1px solid silver;">
+      <th style="border-style: none; width:150px;"><strong>エンチャント[1.13]</strong></th>
+      <th style="border-style: none; width:70px;"><strong>レベル</strong></th>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="loyalty">
+      </label>忠誠
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="impaling">
+      </label>水生特効
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="riptide">
+      </label>激流
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="channeling">
+      </label>召雷
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+  </table>
+  <table class="free-table" style="margin-right:15px; table-layout: fixed;width:220px;">
+    <tr style="border-bottom: 1px solid silver;">
+      <th style="border-style: none; width:150px;"><strong>エンチャント[1.14]</strong></th>
+      <th style="border-style: none; width:70px;"><strong>レベル</strong></th>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="quick_charge">
+      </label>高速装填
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="multishot">
+      </label>拡散
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="piercing">
+      </label>貫通
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+  </table>
+  <table class="free-table" style="margin-right:15px; table-layout: fixed;width:220px;">
+    <tr style="border-bottom: 1px solid silver;">
+      <th style="border-style: none; width:150px;"><strong>エンチャント[1.16]</strong></th>
+      <th style="border-style: none; width:70px;"><strong>レベル</strong></th>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="inputEnch" value="soul_speed">
+      </label>霊魂疾走
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number" name="level" value="1"
+               maxlength="5" style="width:55px;" placeholder="必須" min="1"
+               max="64">
+      </label></td>
+    </tr>
+  </table>
+  <br clear="all">
+  <label for="cmdOutput"></label><textarea id="cmdOutput" name="cmdOutput" rows="5" style="width:100%;"></textarea>
+  <input class="cmdButton" type="button" name="generate" onclick="cmdGenerate()" value="コマンド生成"> <input
+    class="cmdButton" type="button" name="copy" onclick="cmdCopy('cmdOutput')" value="コマンドコピー">
+</form>
+</body>
+</html>

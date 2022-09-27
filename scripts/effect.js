@@ -1,9 +1,16 @@
-function effectCommandGenerate() {
-    let player = document.getElementById("input1")
-    let effect = document.getElementById("input2")
-    let second = document.getElementById("input3")
-    let level = document.getElementById("input4")
-    let particle = document.getElementById("input5")
+function effectCommandGenerate(
+    _player,
+    _effect,
+    _second,
+    _level,
+    _particle,
+    textarea
+    ) {
+    let player = document.getElementById(_player)
+    let effect = document.getElementById(_effect)
+    let second = document.getElementById(_second)
+    let level = document.getElementById(_level)
+    let particle = document.getElementById(_particle)
     let intSecond = ""
     if (second !== "") {
         intSecond = " " + second.value;
@@ -18,7 +25,6 @@ function effectCommandGenerate() {
     }
 
     const command = "/effect give " + player.value + " " + effect.value + intSecond + intLevel + isParticle;
-
-    const output = document.getElementById("cmdOutput")
+    const output = document.getElementById(textarea)
     output.value = command
 }
