@@ -1,0 +1,73 @@
+table {
+    /*width: 100%;*/
+    border-collapse: unset;
+    table-layout: inherit;
+    overflow: hidden;
+    min-width: 300px;
+}
+
+
+input {
+    width: 20px;
+}
+
+.free-table {
+    display: table-cell;
+}
+
+.command-input {
+    width: 120px
+}
+
+.command-table th {
+    width: 200px;
+}
+
+.command-table td {
+    width: 160px;
+    text-align: left;
+}
+
+
+/*.command-table input select {*/
+/*    width: 120px;*/
+/*}*/
+
+#colorValue_2 {
+    width: 50px;
+}
+
+#name_2 {
+    object-position: center;
+}
+
+table td {
+    background: beige;
+}
+
+table th {
+    background: #fff5e5;
+}
+
+
+.inputEnch {
+    width: 180px;
+}
+
+.base selectgpg --list-keys input {
+    width: 80px;
+}
+
+/*.inputEnch th {*/
+/*    width: 350px;*/
+/*}*/
+
+
+/*.inputEnch th {*/
+/*    text-align: center;*/
+/*}*/
+
+.cmdButton {
+    width: 120px;
+}
+

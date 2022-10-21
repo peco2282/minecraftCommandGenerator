@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>command of potions generator</title>
+</head>
+<body>
+<h1>Command Generator</h1>
+<h2>Potion command</h2>
+<h3 id="1.12.2"> ~ 1.12.2</h3>
+<form name="form">
+  <script src="./scripts/utils.js" type="text/javascript"></script>
+  <script src="./scripts/button.css" type="text/css"></script>
+  <table class="command-table">
+    <tr style="border-bottom: 1px solid white;">
+      <th style="border-style: none;">プレイヤー</th>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="text"
+               name="input1_1" size="20" value="@p">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid white;">
+      <th style="border-style: none;">ポーション</th>
+      <td style="border-style: none;">
+        <label>
+          <select class="command-input" size="1" name="input1_2">
+            <option value="minecraft:potion">ポーション</option>
+            <option value="minecraft:splash_potion">スプラッシュポーション</option>
+            <option value="minecraft:lingering_potion">残留ポーション</option>
+            <option value="minecraft:tipped_arrow">効果付きの矢</option>
+          </select>
+        </label>
+      </td>
+    </tr>
+    <tr style="border-bottom: 1px solid white;">
+      <th style="border-style: none;">色</th>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="checkbox"
+               name="input1_9" value="1">
+      </label> : <label>
+        <input
+            type="color" name="input0" size="15" value="@s">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid white;">
+      <th style="border-style: none;">新しい名前</th>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="text"
+               name="input1_4" size="15" value="">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid white;">
+      <th style="border-style: none;">説明文</th>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="text"
+               name="input5" size="15" value="">
+      </label></td>
+    </tr>
+  </table>
+  <br clear="all">
+  <table class="free-table" style="margin-right:15px; table-layout: fixed;width:250px;">
+    <tr style="border-bottom: 1px solid silver;">
+      <th style="width:120px;">効果</th>
+      <th style="width:50px;">レベル</th>
+      <th style="width:80px;">時間(秒)</th>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="input1_6" value="1">
+      </label>移動速度
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input"
+               type="number"
+               name="level"
+               size="15"
+               value="1"
+               min="0"
+               max="10"
+               maxlength="5">
+      </label></td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="time" size="15" value="10" min="0"
+               maxlength="5">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="input6" value="2">
+      </label>移動速度低下
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="level" size="15" value="1" min="0"
+               max="10" maxlength="5">
+      </label></td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="time" size="15" value="10" min="0"
+               maxlength="5">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="input6" value="3">
+      </label>採掘速度上昇
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="level" size="15" value="1" min="0"
+               max="10" maxlength="5">
+      </label></td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="time" size="15" value="10" min="0"
+               maxlength="5">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="input6" value="4">
+      </label>採掘速度低下
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="level" size="15" value="1" min="0"
+               max="10" maxlength="5">
+      </label></td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="time" size="15" value="10" min="0"
+               maxlength="5">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="input1_6" value="5">
+      </label>攻撃力上昇
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="level" size="15" value="1" min="0"
+               max="10" maxlength="5">
+      </label></td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="time" size="15" value="10" min="0"
+               maxlength="5">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="input6" value="6">
+      </label>即時回復
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="level" size="15" value="1" min="0"
+               max="10" maxlength="5">
+      </label></td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="time" size="15" value="10" min="0"
+               maxlength="5">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="input6" value="7">
+      </label>即時ダメージ
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="level" size="15" value="1" min="0"
+               max="10" maxlength="5">
+      </label></td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="time" size="15" value="10" min="0"
+               maxlength="5">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="input6" value="8">
+      </label>飛躍力上昇
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="level" size="15" value="1" min="0"
+               max="10" maxlength="5">
+      </label></td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="time" size="15" value="10" min="0"
+               maxlength="5">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="input6" value="9">
+      </label>吐き気
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="level" size="15" value="1" min="0"
+               max="10" maxlength="5">
+      </label></td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="time" size="15" value="10" min="0"
+               maxlength="5">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="input6" value="10">
+      </label>再生能力
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="level" size="15" value="1" min="0"
+               max="10" maxlength="5">
+      </label></td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="time" size="15" value="10" min="0"
+               maxlength="5">
+      </label></td>
+    </tr>
+  </table>
+  <table class="free-table" style="margin-right:15px; table-layout: fixed;width:250px;">
+    <tr style="border-bottom: 1px solid silver;">
+      <th style="width:120px;">効果</th>
+      <th style="width:50px;">レベル</th>
+      <th style="width:80px;">時間(秒)</th>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="input6" value="11">
+      </label>耐性
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="level" size="15" value="1" min="0"
+               max="10" maxlength="5">
+      </label></td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="time" size="15" value="10" min="0"
+               maxlength="5">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="input6" value="12">
+      </label>火炎耐性
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="level" size="15" value="1" min="0"
+               max="10" maxlength="5">
+      </label></td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="time" size="15" value="10" min="0"
+               maxlength="5">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="input6" value="13">
+      </label>水中呼吸
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="level" size="15" value="1" min="0"
+               max="10" maxlength="5">
+      </label></td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="time" size="15" value="10" min="0"
+               maxlength="5">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="input6" value="14">
+      </label>透明化
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="level" size="15" value="1" min="0"
+               max="10" maxlength="5">
+      </label></td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="time" size="15" value="10" min="0"
+               maxlength="5">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="input6" value="15">
+      </label>盲目
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="level" size="15" value="1" min="0"
+               max="10" maxlength="5">
+      </label></td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="time" size="15" value="10" min="0"
+               maxlength="5">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="input6" value="16">
+      </label>暗視
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="level" size="15" value="1" min="0"
+               max="10" maxlength="5">
+      </label></td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="time" size="15" value="10" min="0"
+               maxlength="5">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="input6" value="17">
+      </label>空腹
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="level" size="15" value="1" min="0"
+               max="10" maxlength="5">
+      </label></td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="time" size="15" value="10" min="0"
+               maxlength="5">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="input6" value="18">
+      </label>弱体化
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="level" size="15" value="1" min="0"
+               max="10" maxlength="5">
+      </label></td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="time" size="15" value="10" min="0"
+               maxlength="5">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="input6" value="19">
+      </label>毒
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="level" size="15" value="1" min="0"
+               max="10" maxlength="5">
+      </label></td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="time" size="15" value="10" min="0"
+               maxlength="5">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="input6" value="20">
+      </label>衰退
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="level" size="15" value="1" min="0"
+               max="10" maxlength="5">
+      </label></td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="time" size="15" value="10" min="0"
+               maxlength="5">
+      </label></td>
+    </tr>
+  </table>
+  <table class="free-table" style="margin-right:15px; table-layout: fixed;width:250px;">
+    <tr style="border-bottom: 1px solid silver;">
+      <th style="width:120px;">効果</th>
+      <th style="width:50px;">レベル</th>
+      <th style="width:80px;">時間(秒)</th>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="input6" value="21">
+      </label>体力増強
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="level" size="15" value="1" min="0"
+               max="10" maxlength="5">
+      </label></td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="time" size="15" value="10" min="0"
+               maxlength="5">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="input6" value="22">
+      </label>衝撃吸収
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="level" size="15" value="1" min="0"
+               max="10" maxlength="5">
+      </label></td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="time" size="15" value="10" min="0"
+               maxlength="5">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="input6" value="23">
+      </label>満腹度回復
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="level" size="15" value="1" min="0"
+               max="10" maxlength="5">
+      </label></td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="time" size="15" value="10" min="0"
+               maxlength="5">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="input6" value="24">
+      </label>発光
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="level" size="15" value="1" min="0"
+               max="10" maxlength="5">
+      </label></td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="time" size="15" value="10" min="0"
+               maxlength="5">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="input6" value="25">
+      </label>浮遊
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="level" size="15" value="1" min="0"
+               max="10" maxlength="5">
+      </label></td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="time" size="15" value="10" min="0"
+               maxlength="5">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="input6" value="26">
+      </label>幸運
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="level" size="15" value="1" min="0"
+               max="10" maxlength="5">
+      </label></td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="time" size="15" value="10" min="0"
+               maxlength="5">
+      </label></td>
+    </tr>
+    <tr style="border-bottom: 1px solid silver;">
+      <td style="border-style: none;"><label>
+        <input type="checkbox" name="input6" value="27">
+      </label>不幸
+      </td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="level" size="15" value="1" min="0"
+               max="10" maxlength="5">
+      </label></td>
+      <td style="border-style: none;"><label>
+        <input class="command-input" type="number"
+               name="time" size="15" value="10" min="0"
+               maxlength="5">
+      </label></td>
+    </tr>
+  </table>
+  <br clear="all">
+  <label for="cmdOutput"></label><textarea id="cmdOutput" name="cmdOutput" rows="5" style="width:100%;"></textarea>
+  <input class="cmdButton--gen" type="button" name="generate" onclick="cmdGenerate()"
+         value="コマンド生成">&nbsp;<input class="cmdButton--copy" type="button" name="copy"
+                                       onclick="copyClipboard(document.getElementById('cmdOutput'))" value="コマンドコピー">
+</form>
+</body>
+</html>

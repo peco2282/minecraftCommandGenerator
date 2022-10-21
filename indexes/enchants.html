@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" content="text/html; text/css" http-equiv="Content-Type">
+  <link rel="stylesheet" type="text/css" href="../scripts/table.css">
   <title>command of enchanted item generator</title>
+
 </head>
 <body>
+<!--<link href="./scripts/table.css" rel="stylesheet">-->
 <h1>Command Generator</h1>
 <h2>Enchant command</h2>
 <h3 id="1.12.2"> ~ 1.12.2</h3>
@@ -567,7 +570,7 @@
   <input class="commandOutputButton"
          type="button"
          name="generate"
-         onclick="enchantCommandGenerate(
+         onclick="enchantCommandGenerateOn1_12_2(
              'input1_1',
              'input1_2',
              'input1_3',
@@ -582,8 +585,817 @@
       class="cmdButton"
       type="button"
       name="copy"
-      onclick="copyClipboad(document.getElementById('commandOutputArea_1_12'))"
+      onclick="copyClipboard(document.getElementById('commandOutputArea_1_12'))"
       value="コマンドコピー">
+</form>
+<!---->
+<h3 id="1.13"> ~ 1.13</h3>
+<form name="form">
+  <b>1.基本設定</b><br>
+  <table class="command-table base">
+    <tr>
+      <th>プレイヤー</th>
+      <td>
+        <input class="command-input"
+               type="text"
+               id="player_2"
+               value="@p"
+               placeholder="必須"></td>
+    </tr>
+    <tr>
+      <th>アイテム</th>
+      <td>
+        <select class="command-input"
+                size="1"
+                id="item_2">
+          <option value="minecraft:golden_sword">金の剣</option>
+          <option value="minecraft:wooden_sword">木の剣</option>
+          <option value="minecraft:stone_sword">石の剣</option>
+          <option value="minecraft:iron_sword">鉄の剣</option>
+          <option value="minecraft:diamond_sword">ダイヤモンドの剣</option>
+          <option value="minecraft:netherite_sword">[1.16]ネザライトの剣</option>
+          <option value="minecraft:golden_axe">金の斧</option>
+          <option value="minecraft:wooden_axe">木の斧</option>
+          <option value="minecraft:stone_axe">石の斧</option>
+          <option value="minecraft:iron_axe">鉄の斧</option>
+          <option value="minecraft:diamond_axe">ダイヤモンドの斧</option>
+          <option value="minecraft:netherite_axe">[1.16]ネザライトの斧</option>
+          <option value="minecraft:golden_pickaxe">金のツルハシ</option>
+          <option value="minecraft:wooden_pickaxe">木のツルハシ</option>
+          <option value="minecraft:stone_pickaxe">石のツルハシ</option>
+          <option value="minecraft:iron_pickaxe">鉄のツルハシ</option>
+          <option value="minecraft:diamond_pickaxe">ダイヤモンドのツルハシ</option>
+          <option value="minecraft:netherite_pickaxe">[1.16]ネザライトのツルハシ</option>
+          <option value="minecraft:golden_shovel">金のシャベル</option>
+          <option value="minecraft:wooden_shovel">木のシャベル</option>
+          <option value="minecraft:stone_shovel">石のシャベル</option>
+          <option value="minecraft:iron_shovel">鉄のシャベル</option>
+          <option value="minecraft:diamond_shovel">ダイヤモンドのシャベル</option>
+          <option value="minecraft:netherite_shovel">[1.16]ネザライトのシャベル</option>
+          <option value="minecraft:golden_hoe">金のクワ</option>
+          <option value="minecraft:wooden_hoe">木のクワ</option>
+          <option value="minecraft:stone_hoe">石のクワ</option>
+          <option value="minecraft:iron_hoe">鉄のクワ</option>
+          <option value="minecraft:diamond_hoe">ダイヤモンドのクワ</option>
+          <option value="minecraft:netherite_hoe">[1.16]ネザライトのクワ</option>
+          <option value="minecraft:bow">弓</option>
+          <option value="minecraft:golden_helmet">金のヘルメット</option>
+          <option value="minecraft:leather_helmet">革の帽子</option>
+          <option value="minecraft:chainmail_helmet">チェーンヘルメット</option>
+          <option value="minecraft:iron_helmet">鉄のヘルメット</option>
+          <option value="minecraft:diamond_helmet">ダイヤのヘルメット</option>
+          <option value="minecraft:netherite_helmet">[1.16]ネザライトのヘルメット</option>
+          <option value="minecraft:golden_chestplate">金のチェストプレート</option>
+          <option value="minecraft:leather_chestplate">革の上着</option>
+          <option value="minecraft:chainmail_chestplate">チェーンチェストプレート</option>
+          <option value="minecraft:iron_chestplate">鉄のチェストプレート</option>
+          <option value="minecraft:diamond_chestplate">ダイヤのチェストプレート</option>
+          <option value="minecraft:netherite_chestplate">[1.16]ネザライトのチェストプレート</option>
+          <option value="minecraft:golden_leggings">金のレギンス</option>
+          <option value="minecraft:leather_leggings">革のズボン</option>
+          <option value="minecraft:chainmail_leggings">チェーンレギンス</option>
+          <option value="minecraft:iron_leggings">鉄のレギンス</option>
+          <option value="minecraft:diamond_leggings">ダイヤのレギンス</option>
+          <option value="minecraft:netherite_leggings">[1.16]ネザライトのレギンス</option>
+          <option value="minecraft:golden_boots">金のブーツ</option>
+          <option value="minecraft:leather_boots">革のブーツ</option>
+          <option value="minecraft:chainmail_boots">チェーンブーツ</option>
+          <option value="minecraft:iron_boots">鉄のブーツ</option>
+          <option value="minecraft:diamond_boots">ダイヤのブーツ</option>
+          <option value="minecraft:netherite_boots">[1.16]ネザライトのブーツ</option>
+          <option value="minecraft:shield">盾</option>
+          <option value="minecraft:fishing_rod">釣り竿</option>
+          <option value="minecraft:shears">ハサミ</option>
+          <option value="minecraft:enchanted_book">エンチャントの本</option>
+          <option value="minecraft:elytra">エリトラ</option>
+          <option value="minecraft:trident">[1.13]トライデント</option>
+          <option value="minecraft:turtle_helmet">[1.13]カメの甲羅</option>
+          <option value="minecraft:crossbow">[1.14]クロスボウ</option>
+          <option value="minecraft:flint_and_steel">火打石と打ち金</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <th>新しい名前</th>
+      <td>
+        <input class="command-input"
+               type="text"
+               id="name_2"
+               value=""
+               placeholder="未設定"></td>
+    </tr>
+    <tr>
+      <th>説明文</th>
+      <td>
+        <input class="command-input"
+               type="text"
+               id="lore_2"
+               value=""
+               placeholder="未設定"></td>
+    </tr>
+  </table>
+  <table class="command-table base">
+    <tr>
+      <th>色</th>
+      <td>
+        <input type="checkbox"
+               id="color_2"
+               value="1">:
+        <input type="color"
+               id="colorValue_2"
+               size="15"
+               value="@p"></td>
+    </tr>
+    <tr>
+      <th>不可壊</th>
+      <td>
+        <input type="checkbox"
+               id="isUnbreak_2"
+               value="true">ON
+      </td>
+    </tr>
+    <tr>
+      <th>個数</th>
+      <td>
+        <input class="command-input"
+               type="number"
+               min="1"
+               max="64"
+               id="num_2"
+               value=""
+               placeholder="未設定"></td>
+    </tr>
+    <tr>
+      <th>耐久値ダメージ</th>
+      <td>
+        <input class="command-input"
+               type="number"
+               min="0"
+               id="damage_2"
+               value=""
+               placeholder="未設定"></td>
+    </tr>
+  </table>
+  <br clear="all">
+  <b>2.エンチャント設定</b><br>
+  <table class="free-table">
+    <tr>
+      <th class="inputEnch"><strong>エンチャント</strong></th>
+      <th><strong>レベル</strong></th>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="protection">ダメージ軽減
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="fire_protection">火炎耐性
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="feather_falling">落下耐性
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="blast_protection">爆発耐性
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="projectile_protection">飛び道具耐性
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="respiration">水中呼吸
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="aqua_affinity">水中採掘
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="thorns">棘の鎧
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="depth_strider">水中歩行
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="frost_walker">氷渡り
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+  </table>
+  <table class="free-table">
+    <tr>
+      <th class="inputEnch"><strong>エンチャント</strong></th>
+      <th><strong>レベル</strong></th>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="binding_curse">束縛の呪い
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="sharpness">ダメージ増加
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="smite">アンデット特効
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="bane_of_arthropods">虫特効
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="knockback">ノックバック
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="fire_aspect">火属性
+      </td>
+      <td style="border-style: none;">
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="looting">ドロップ増加
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="sweeping">範囲ダメージ増加
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="efficiency">効率強化
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="silk_touch">シルクタッチ
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+  </table>
+  <table class="free-table">
+    <tr>
+      <th class="inputEnch"><strong>エンチャント</strong></th>
+      <th><strong>レベル</strong></th>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="unbreaking">耐久力
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="fortune">幸運
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="power">射撃ダメージ増加
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="punch">パンチ
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="flame">フレイム
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="infinity">無限
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="luck_of_the_sea">宝釣り
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="lure">入れ食い
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="mending">修繕
+      </td>
+      <td style="border-style: none;">
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="vanishing_curse">消滅の呪い
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+  </table>
+  <table class="free-table">
+    <tr>
+      <th class="inputEnch"><strong>エンチャント[1.13]</strong></th>
+      <th><strong>レベル</strong></th>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="loyalty">忠誠
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="impaling">水生特効
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="riptide">激流
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="channeling">召雷
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+  </table>
+  <table class="free-table">
+    <tr>
+      <th class="inputEnch"><strong>エンチャント[1.14]</strong></th>
+      <th style="border-style: none; width:70px;"><strong>レベル</strong></th>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="quick_charge">高速装填
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="multishot">拡散
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="piercing">貫通
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+  </table>
+  <table class="free-table">
+    <tr>
+      <th class="inputEnch"><strong>エンチャント[1.16]</strong></th>
+      <th><strong>レベル</strong></th>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"
+               name="inputEnch"
+               value="soul_speed">霊魂疾走
+      </td>
+      <td>
+        <input class="command-input"
+               type="number"
+               name="level_2"
+               value="1"
+               maxlength="5"
+               placeholder="必須"
+               min="1"
+               max="64"></td>
+    </tr>
+  </table>
+  <br clear="all">
+  <textarea id="commandOutputArea_1_13"
+            rows="5"
+            style="width:100%;"></textarea>
+  <input class="cmdButton"
+         type="button"
+         name="generate"
+         onclick="enchantCommandGenerateOn1_13('player_2', 'item_2', 'name_2', 'lore_2', 'color_2', 'colorValue_2', 'isUnbreak_2', 'num_2', 'damage_2', 'inputEnch', 'level_2', 'commandOutputArea_1_13')"
+         value="コマンド生成">
+  <input class="cmdButton"
+         type="button"
+         name="copy"
+         onclick="copyClipboard(document.getElementById('commandOutputArea_1_13'))"
+         value="コマンドコピー">
 </form>
 </body>
 </html>

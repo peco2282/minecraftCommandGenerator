@@ -1,0 +1,1 @@
+function enchantCommandGenerateOn1_12_2() {}
