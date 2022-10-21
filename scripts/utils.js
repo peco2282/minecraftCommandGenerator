@@ -1,4 +1,4 @@
-function copyClipboad(copyTarget) {
+function copyClipboard(copyTarget) {
     copyTarget.exact
     const value = copyTarget.value
     let r;
