@@ -15,7 +15,7 @@ input {
     display: table-cell;
 }
 
-.command-input {
+.command-input, .commandOutputButton {
     width: 120px
 }
 
@@ -54,7 +54,7 @@ table th {
     width: 180px;
 }
 
-.base selectgpg --list-keys input {
+.base input {
     width: 80px;
 }
 
