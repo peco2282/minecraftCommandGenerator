@@ -1,12 +1,38 @@
-.cmdButton--gen,
-form.cmdButton--gen {
+/*.cmdButton--gen,*/
+/*form.cmdButton--gen {*/
+/*    color: #fff;*/
+/*    background-color: #eb6100;*/
+/*    border-radius: 50px;*/
+/*}*/
+/*.cmdButton--copy,*/
+/*form.cmdButton--copy {*/
+/*    color: #fff;*/
+/*    background: #f56500;*/
+/*    border-radius: 50px;*/
+/*}*/
+
+.button {
+    display: inline-block;
     color: #fff;
-    background-color: #eb6100;
-    border-radius: 50px;
+    position: center;
+    padding: 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    outline: none;
+    background: linear-gradient(
+            to right,
+            #52A0FD 0%,
+            #00E2FA 80%,
+            #00e2fa 100%
+    );
+    box-shadow: 0 15px 15px rgba(82, 160, 253, 0.4);
+
+    transition: all 0.3s ease-out;
 }
-.cmdButton--copy,
-form.cmdButton--copy {
-    color: #fff;
-    background: #f56500;
-    border-radius: 50px;
+
+.button:hover {
+    transform: scale(0.95);
 }
+
+
+
