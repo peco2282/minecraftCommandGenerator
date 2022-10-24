@@ -249,7 +249,6 @@ function enchantCommandGenerateOn1_13(
   let inputDataString = JSON.stringify(inputData)
       .replaceAll(/\\/g, "")
       .replaceAll(/"/g, "");
-  alert(`${nameFlag} || ${loreFlag} || ${colorValue.value.substring(1, 7)}`)
   command += inputDataString;
   let value = "";
   if (num.value !== "") value = ` ${num.value}`
