@@ -33,7 +33,7 @@ input {
 /*    width: 120px;*/
 /*}*/
 
-#colorValue_2 {
+#colorValue_2, .color_value {
     width: 50px;
 }
 
@@ -69,5 +69,9 @@ table th {
 
 .cmdButton {
     width: 120px;
+}
+
+.textarea {
+    width: 100%;
 }
 
