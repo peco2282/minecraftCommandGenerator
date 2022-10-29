@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>effect commands generator</title>
-  <link href="../css/button.css" rel="stylesheet" type="text/css" media="all">
+  <link href="../css/button.css" rel="stylesheet" type="text/css">
   <link href="../css/table.css" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/png" href="../icon/nc162059.png">
 </head>
 <body>
 <h1>Command Generator</h1>
@@ -12,8 +13,8 @@
 <br>
 <h3 id="1.12.2">~ 1.12.2</h3>
 <form>
-  <script src="../scripts/effect.js"></script>
-  <script src="../scripts/utils.js"></script>
+  <script src="../script/effect.js"></script>
+  <script src="../script/utils.js"></script>
 
   <table class="command-table">
     <tr>
@@ -119,7 +120,7 @@
             readonly
             rows="2">
   </textarea>
-  <script src="../scripts/utils.js"></script>
+  <script src="../script/utils.js"></script>
   <input class="commandOutputButton button"
          type="button"
          id="generate"
@@ -133,7 +134,7 @@
 </form>
 <h3 id="1.13">1.13</h3>
 <form>
-  <script src="../scripts/effect.js"></script>
+  <script src="../script/effect.js"></script>
   <table class="command-table">
     <tr>
       <th>プレイヤー</th>
@@ -217,7 +218,7 @@
   <br>
   <label for="cmdOutput1_13"></label>
   <textarea id="cmdOutput1_13" name="cmdOutput" class="textarea" rows="2"></textarea>
-  <script src="../scripts/utils.js"></script>
+  <script src="../script/utils.js"></script>
   <input class="commandOutputButton button" type="button" name="generate"
          onclick="effectCommandGenerate('input2_1', 'input2_2', 'input2_3', 'input2_4', 'input2_5', 'cmdOutput1_13')"
          value="コマンド生成">&nbsp;&nbsp;

@@ -59,11 +59,11 @@ textarea {
 }
 
 
-.inputEnch {
+.inputEnch, .inputEffect {
     min-width: 200px;
 }
 
-.inputLvl {
+.inputLvl, .inputTime {
     width: 80px;
 }
 
