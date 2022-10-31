@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Give</title>
+  <link rel="stylesheet" type="text/css" href="../css/table.css">
+  <link rel="stylesheet" type="text/css" href="../css/button.css">
+  <link rel="icon" type="image/png" href="../icon/nc162059.png">
+</head>
+<body>
+<form name="form">
+  <script src="../script/give.js"></script>
+  <script src="../script/utils.js"></script>
+  <h3 id="1.12.2">1.12.2 giveコマンド</h3>
+  <b>1. 初期設定</b>
+  <table class="base command-table">
+    <tr>
+      <th>プレイヤー</th>
+      <td><label>
+        <input class="command-input" type="text"
+               id="player" size="20" value="@p">
+      </label></td>
+    </tr>
+    <tr>
+      <th>新しい名前</th>
+      <td><label>
+        <input class="command-input"
+               type="text"
+               id="name"
+               size="15"
+               value="">
+      </label></td>
+    </tr>
+    <tr>
+      <th>アイテム</th>
+      <td>
+        <label for="item"></label>
+        <select class="command-input"
+                size="1"
+                id="item">
+          <option value="minecraft:golden_sword">金の剣</option>
+          <option value="minecraft:wooden_sword">木の剣</option>
+          <option value="minecraft:stone_sword">石の剣</option>
+          <option value="minecraft:iron_sword">鉄の剣</option>
+          <option value="minecraft:diamond_sword">ダイヤモンドの剣</option>
+          <option value="minecraft:golden_axe">金の斧</option>
+          <option value="minecraft:wooden_axe">木の斧</option>
+          <option value="minecraft:stone_axe">石の斧</option>
+          <option value="minecraft:iron_axe">鉄の斧</option>
+          <option value="minecraft:diamond_axe">ダイヤモンドの斧</option>
+          <option value="minecraft:golden_pickaxe">金のツルハシ</option>
+          <option value="minecraft:wooden_pickaxe">木のツルハシ</option>
+          <option value="minecraft:stone_pickaxe">石のツルハシ</option>
+          <option value="minecraft:iron_pickaxe">鉄のツルハシ</option>
+          <option value="minecraft:diamond_pickaxe">ダイヤモンドのツルハシ</option>
+          <option value="minecraft:golden_shovel">金のシャベル</option>
+          <option value="minecraft:wooden_shovel">木のシャベル</option>
+          <option value="minecraft:stone_shovel">石のシャベル</option>
+          <option value="minecraft:iron_shovel">鉄のシャベル</option>
+          <option value="minecraft:diamond_shovel">ダイヤモンドのシャベル</option>
+          <option value="minecraft:golden_hoe">金のクワ</option>
+          <option value="minecraft:wooden_hoe">木のクワ</option>
+          <option value="minecraft:stone_hoe">石のクワ</option>
+          <option value="minecraft:iron_hoe">鉄のクワ</option>
+          <option value="minecraft:diamond_hoe">ダイヤモンドのクワ</option>
+          <option value="minecraft:bow">弓</option>
+          <option value="minecraft:golden_helmet">金のヘルメット</option>
+          <option value="minecraft:leather_helmet">革の帽子</option>
+          <option value="minecraft:chainmail_helmet">チェーンヘルメット</option>
+          <option value="minecraft:iron_helmet">鉄のヘルメット</option>
+          <option value="minecraft:diamond_helmet">ダイヤのヘルメット</option>
+          <option value="minecraft:golden_chestplate">金のチェストプレート</option>
+          <option value="minecraft:leather_chestplate">革の上着</option>
+          <option value="minecraft:chainmail_chestplate">チェーンチェストプレート</option>
+          <option value="minecraft:iron_chestplate">鉄のチェストプレート</option>
+          <option value="minecraft:diamond_chestplate">ダイヤのチェストプレート</option>
+          <option value="minecraft:golden_leggings">金のレギンス</option>
+          <option value="minecraft:leather_leggings">革のズボン</option>
+          <option value="minecraft:chainmail_leggings">チェーンレギンス</option>
+          <option value="minecraft:iron_leggings">鉄のレギンス</option>
+          <option value="minecraft:diamond_leggings">ダイヤのレギンス</option>
+          <option value="minecraft:golden_boots">金のブーツ</option>
+          <option value="minecraft:leather_boots">革のブーツ</option>
+          <option value="minecraft:chainmail_boots">チェーンブーツ</option>
+          <option value="minecraft:iron_boots">鉄のブーツ</option>
+          <option value="minecraft:diamond_boots">ダイヤのブーツ</option>
+          <option value="minecraft:shield">盾</option>
+          <option value="minecraft:fishing_rod">釣り竿</option>
+          <option value="minecraft:shears">ハサミ</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <th>説明文</th>
+      <td>
+        <label for="lore"></label><textarea id="lore"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <th>不可壊</th>
+      <td><label>
+        <input class="command-input"
+               type="checkbox"
+               id="isUnbreak"
+               value="">
+      </label>
+      </td>
+    </tr>
+  </table>
+  <b>2. 詳細設定</b>
+  <table class="free-table">
+    <tr>
+      <th>属性</th>
+      <th>有無</th>
+      <th>値</th>
+    </tr>
+    <tr>
+      <th>修理コスト</th>
+      <td><label>
+        <input id="iscost" type="checkbox" style="width: 30px;">
+      </label></td>
+      <td><label>
+        <input id="cost" type="number" class="command-input">
+      </label></td>
+    </tr>
+  </table>
+  <b>3. 設定</b>
+  <br>
+  <table class="free-table">
+    <tr>
+      <th><strong>属性</strong></th>
+      <th><strong>有無</strong></th>
+      <th><strong>値</strong></th>
+      <th><strong>スロット</strong></th>
+    </tr>
+    <tr>
+      <td>最大体力</td>
+      <td>
+        <label><input name="check" type="checkbox" value="generic.maxHealth"></label>
+      </td>
+      <td><label>
+        <input name="option" type="number" class="command-input">
+      </label></td>
+      <td>
+        <label>
+          <select name="hand">
+            <option value="mainhand">メインハンド</option>
+            <option value="offhand">オフハンド</option>
+            <option value="head">頭</option>
+            <option value="chest">胸</option>
+            <option value="legs">足</option>
+            <option value="feet">靴</option>
+          </select>
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <td>索敵範囲</td>
+      <td>
+        <label><input name="check" type="checkbox" value="generic.followRange"></label>
+      </td>
+      <td><label>
+        <input name="option" type="number" size="30px" class="command-input">
+      </label></td>
+      <td>
+        <label>
+          <select name="hand">
+            <option value="mainhand">メインハンド</option>
+            <option value="offhand">オフハンド</option>
+            <option value="head">頭</option>
+            <option value="chest">胸</option>
+            <option value="legs">足</option>
+            <option value="feet">靴</option>
+          </select>
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <td>ノックバック耐性</td>
+      <td>
+        <label><input name="check" type="checkbox" value="generic.knockbackResistance"></label>
+      </td>
+      <td><label>
+        <input name="option" type="number" size="30px" class="command-input">
+      </label></td>
+      <td>
+        <label>
+          <select name="hand">
+            <option value="mainhand">メインハンド</option>
+            <option value="offhand">オフハンド</option>
+            <option value="head">頭</option>
+            <option value="chest">胸</option>
+            <option value="legs">足</option>
+            <option value="feet">靴</option>
+          </select>
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <td>移動速度</td>
+      <td>
+        <label><input name="check" type="checkbox" value="generic.movementSpeed"></label>
+      </td>
+      <td><label>
+        <input name="option" type="number" size="30px" class="command-input">
+      </label></td>
+      <td>
+        <label>
+          <select name="hand">
+            <option value="mainhand">メインハンド</option>
+            <option value="offhand">オフハンド</option>
+            <option value="head">頭</option>
+            <option value="chest">胸</option>
+            <option value="legs">足</option>
+            <option value="feet">靴</option>
+          </select>
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <td>攻撃力</td>
+      <td>
+        <label><input name="check" type="checkbox" value="generic.attackDamage"></label>
+      </td>
+      <td><label>
+        <input name="option" type="number" size="30px" class="command-input">
+      </label></td>
+      <td>
+        <label>
+          <select name="hand">
+            <option value="mainhand">メインハンド</option>
+            <option value="offhand">オフハンド</option>
+            <option value="head">頭</option>
+            <option value="chest">胸</option>
+            <option value="legs">足</option>
+            <option value="feet">靴</option>
+          </select>
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <td>防具防御力</td>
+      <td>
+        <label><input name="check" type="checkbox" value="generic.armor"></label>
+      </td>
+      <td><label>
+        <input name="option" type="number" size="30px" class="command-input">
+      </label></td>
+      <td>
+        <label>
+          <select name="hand">
+            <option value="mainhand">メインハンド</option>
+            <option value="offhand">オフハンド</option>
+            <option value="head">頭</option>
+            <option value="chest">胸</option>
+            <option value="legs">足</option>
+            <option value="feet">靴</option>
+          </select>
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <td>防具強度</td>
+      <td>
+        <label><input name="check" type="checkbox" value="generic.armorToughness"></label>
+      </td>
+      <td><label>
+        <input name="option" type="number" size="30px" class="command-input">
+      </label></td>
+      <td>
+        <label>
+          <select name="hand">
+            <option value="mainhand">メインハンド</option>
+            <option value="offhand">オフハンド</option>
+            <option value="head">頭</option>
+            <option value="chest">胸</option>
+            <option value="legs">足</option>
+            <option value="feet">靴</option>
+          </select>
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <td>攻撃速度(プレイヤー)</td>
+      <td>
+        <label><input name="check" type="checkbox" value="generic.attackSpeed"></label>
+      </td>
+      <td><label>
+        <input name="option" type="number" size="30px" class="command-input">
+      </label></td>
+      <td>
+        <label>
+          <select name="hand">
+            <option value="mainhand">メインハンド</option>
+            <option value="offhand">オフハンド</option>
+            <option value="head">頭</option>
+            <option value="chest">胸</option>
+            <option value="legs">足</option>
+            <option value="feet">靴</option>
+          </select>
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <td>運(プレイヤー)</td>
+      <td>
+        <label><input name="check" type="checkbox" value="generic.luck"></label>
+      </td>
+      <td><label>
+        <input name="option" type="number" size="30px" class="command-input">
+      </label></td>
+      <td>
+        <label>
+          <select name="hand">
+            <option value="mainhand">メインハンド</option>
+            <option value="offhand">オフハンド</option>
+            <option value="head">頭</option>
+            <option value="chest">胸</option>
+            <option value="legs">足</option>
+            <option value="feet">靴</option>
+          </select>
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <td>ジャンプ力(ウマ)</td>
+      <td>
+        <label><input name="check" type="checkbox" value="horse.jumpStrength"></label>
+      </td>
+      <td><label>
+        <input name="option" type="number" size="30px" class="command-input">
+      </label></td>
+      <td>
+        <label>
+          <select name="hand">
+            <option value="mainhand">メインハンド</option>
+            <option value="offhand">オフハンド</option>
+            <option value="head">頭</option>
+            <option value="chest">胸</option>
+            <option value="legs">足</option>
+            <option value="feet">靴</option>
+          </select>
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <td>増援(ゾンビ)</td>
+      <td>
+        <label><input name="check" type="checkbox" value="zombie.spawnReinforcements"></label>
+      </td>
+      <td><label>
+        <input name="option" class="command-input" size="30px" type="number">
+      </label></td>
+      <td>
+        <label>
+          <select name="hand">
+            <option value="mainhand">メインハンド</option>
+            <option value="offhand">オフハンド</option>
+            <option value="head">頭</option>
+            <option value="chest">胸</option>
+            <option value="legs">足</option>
+            <option value="feet">靴</option>
+          </select>
+        </label>
+      </td>
+    </tr>
+  </table>
+  <label>
+    <textarea class="textarea" id="commandOutputArea_1_12"></textarea>
+  </label>
+  <input id="" class="button commandOutputButton" type="button" onclick="_all(
+      'player',
+      'item',
+      'lore',
+      'name',
+      'isUnbreak',
+      'iscost',
+      'cost',
+      'check',
+      'option',
+      'hand',
+      'commandOutputArea_1_12'
+  )" value="コマンド生成">
+  <input
+      class="button cmdButton"
+      type="button"
+      onclick="copyClipboard(
+          document.getElementById('commandOutputArea_1_12')
+          )"
+      value="コマンドコピー">
+</form>
+</body>
+</html>
