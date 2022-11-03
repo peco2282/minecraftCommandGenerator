@@ -4,12 +4,19 @@ body {
 
 table {
     /*width: 100%;*/
-    border-collapse: unset;
+    /*border-collapse: unset;*/
     table-layout: inherit;
     overflow: hidden;
     width: 300px;
 }
 
+table .item {
+    width: 300px;
+}
+
+table .item_label {
+    width: 150px;
+}
 
 input {
     width: 20px;
@@ -20,25 +27,23 @@ input {
 }
 
 .command-input, .cmdButton , .commandOutputButton {
-    width: 150px
+    width: 80px
 }
 
 .command-table th {
-    width: 200px;
+    width: 150px;
 }
 
 .command-table td {
-    width: 160px;
+    width: 150px;
     text-align: left;
 }
 
 
-/*.command-table input select {*/
-/*    width: 120px;*/
-/*}*/
+
 
 #colorValue_2, .color_value {
-    width: 50px;
+    width: auto;
 }
 
 #name_2 {
@@ -47,6 +52,31 @@ input {
 
 table td {
     background: beige;
+}
+
+.way th {
+    width: 50px;
+}
+
+.way td {
+    width: 350px;
+}
+
+/*th.relative{*/
+/*    width: 250px;*/
+/*}*/
+
+table.relative {
+    width: 400px;
+}
+
+
+th.relative_num {
+    width: 100px;
+}
+
+th.relative_check {
+    width: 120px;
 }
 
 table th {
@@ -64,23 +94,39 @@ textarea {
 }
 
 .inputLvl, .inputTime {
-    width: 80px;
+    width: auto;
 }
 
 .base input {
-    width: 80px;
+    width: auto;
 }
 
-/*.inputEnch th {*/
-/*    width: 350px;*/
-/*}*/
+option.item {
+    width: 200px;
+}
 
 
-/*.inputEnch th {*/
-/*    text-align: center;*/
-/*}*/
+.attr {
+    width: 100px;
+}
 
 .textarea {
     width: 100%;
+}
+
+label.relative_check {
+    text-align: center;
+    top:0;
+    bottom:0;
+    left:0;
+    margin:auto;
+}
+
+th.item_label {
+    width: 200px;
+}
+
+td.item {
+    width: 100px;
 }
 

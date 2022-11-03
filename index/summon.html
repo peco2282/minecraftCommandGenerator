@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Summon</title>
+  <link href="../css/table.css" rel="stylesheet" type="text/css">
+  <link href="../css/button.css" rel="stylesheet" type="text/css">
+  <link href="../icon/nc162059.png" rel="icon" type="image/png">
+</head>
+<body>
+<script src="../script/summon.js"></script>
+<script src="/script/utils.js"></script>
+<b>1. 初期設定</b>
+<form class="command-table base">
+  <table>
+    <tr>
+      <th>エンティティ名</th>
+      <td>
+        <label for="entity">
+        <select class="command-input" id="entity">
+          <option value="tnt_minecart">TNTトロッコ</option>
+          <option value="armor_stand">アーマースタンド</option>
+          <option value="item">アイテム</option>
+          <option value="squid">イカ</option>
+          <option value="illusion_illager">イリュージョナー</option>
+          <option value="wither">ウィザー</option>
+          <option value="wither_skeleton">ウィザースケルトン</option>
+          <option value="wither_skull">ウィザーのたま</option>
+          <option value="witch">ウィッチ</option>
+          <option value="vindication_illager">ヴィンディケーター</option>
+          <option value="vex">ヴェックス</option>
+          <option value="rabbit">ウサギ</option>
+          <option value="evocation_illager">エヴォーカー</option>
+          <option value="area_effect_cloud">エリアエフェクトクラウド</option>
+          <option value="elder_guardian">エルダーガーディアン</option>
+          <option value="ender_crystal">エンダークリスタル</option>
+          <option value="ender_dragon">エンダードラゴン</option>
+          <option value="dragon_fireball">エンダードラゴンのたま</option>
+          <option value="endermite">エンダーマイト</option>
+          <option value="enderman">エンダーマン</option>
+          <option value="parrot">オウム</option>
+          <option value="wolf">オオカミ</option>
+          <option value="guardian">ガーディアン</option>
+          <option value="ghast">ガスト</option>
+          <option value="fireball">ガストのたま</option>
+          <option value="furnace_minecart">かまどトロッコ</option>
+          <option value="mooshroom">キノコ牛</option>
+          <option value="creeper">クリーパー</option>
+          <option value="bat">コウモリ</option>
+          <option value="commandblock_minecart">コマンドブロックトロッコ</option>
+          <option value="giant">ジャイアント</option>
+          <option value="shulker">シャルカー</option>
+          <option value="shulker_bullet">シャルカーのたま</option>
+          <option value="silverfish">シルバーフィッシュ</option>
+          <option value="skeleton">スケルトン</option>
+          <option value="skeleton_horse">スケルトンホース</option>
+          <option value="stray">ストレイ</option>
+          <option value="snowman">スノーゴーレム</option>
+          <option value="spider">スパイダー</option>
+          <option value="spawner_minecart">スポーンブロックトロッコ</option>
+          <option value="slime">スライム</option>
+          <option value="zombie">ゾンビ</option>
+          <option value="zombie_pigman">ゾンビピッグマン</option>
+          <option value="zombie_horse">ゾンビホース</option>
+          <option value="chest_minecart">チェストトロッコ</option>
+          <option value="minecart">トロッコ</option>
+          <option value="chicken">ニワトリ</option>
+          <option value="husk">ハスク</option>
+          <option value="blaze">ブレイズ</option>
+          <option value="small_fireball">ブレイズのたま</option>
+          <option value="boat">ボート</option>
+          <option value="hopper_minecart">ホッパートロッコ</option>
+          <option value="magma_cube">マグマキューブ</option>
+          <option value="ocelot">ヤマネコ</option>
+          <option value="mule">ラバ</option>
+          <option value="llama">ラマ</option>
+          <option value="llama_spit">ラマの唾</option>
+          <option value="leash_knot">リードの結び目</option>
+          <option value="fireworks_rocket">ロケット花火</option>
+          <option value="donkey">ロバ</option>
+          <option value="lightning_bolt">稲妻</option>
+          <option value="painting">絵画</option>
+          <option value="item_frame">額縁</option>
+          <option value="cow">牛</option>
+          <option value="xp_bottle">経験値</option>
+          <option value="evocation_fangs">呼び出された牙</option>
+          <option value="villager">村人</option>
+          <option value="zombie_villager">村人ゾンビ</option>
+          <option value="tnt">着火されたTNT</option>
+          <option value="villager_golem">鉄ゴーレム</option>
+          <option value="eye_of_ender_signal">投げられたエンダーアイ</option>
+          <option value="ender_pearl">投げられたエンダーパール</option>
+          <option value="potion">投げられたスプラッシュポーション</option>
+          <option value="xp_bottle">投げられた経験値ボトル</option>
+          <option value="snowball">投げられた雪玉</option>
+          <option value="cave_spider">毒蜘蛛</option>
+          <option value="pig">豚</option>
+          <option value="horse">馬</option>
+          <option value="polar_bear">白クマ</option>
+          <option value="spectral_arrow">放たれた発光の矢</option>
+          <option value="arrow">放たれた矢</option>
+          <option value="sheep">羊</option>
+          <option value="falling_block">落下中のブロック</option>
+        </select>
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <th>新しい名前</th>
+      <td>
+        <label for="_name"></label>
+        <input class="command-input" id="_name" type="text">
+      </td>
+    </tr>
+
+  </table>
+  <br>
+  <b>2. 座標設定</b>
+  <table>
+    <tr>
+      <th>X座標</th>
+      <td>
+        <label>
+          <input class="command-input" name="pos" type="number" value="0">
+        </label>
+      </td>
+      <td>
+        <label>
+          <input class="command-input" name="isRelative" type="checkbox">
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <th>Y座標</th>
+      <td>
+        <label>
+          <input class="command-input" name="pos" type="number" value="0">
+        </label>
+      </td>
+      <td>
+        <label>
+          <input class="command-input" name="isRelative" type="checkbox">
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <th>Z座標</th>
+      <td>
+        <label>
+          <input class="command-input" name="pos" type="number" value="0">
+        </label>
+      </td>
+      <td>
+        <label>
+          <input class="command-input" name="isRelative" type="checkbox">
+        </label>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <b>3. 詳細設定</b>
+  <table>
+    <tr>
+      <th>名前を常に表示</th>
+      <td>
+        <label>
+          <input class="command-input" id="alwaysName" type="checkbox">
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <th>無敵</th>
+      <td>
+        <label>
+          <input class="command-input" id="isInvincible" type="checkbox">
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <th>デスポーンしない</th>
+      <td>
+        <label for="isNoDespone"></label>
+        <input class="command-input" id="isNoDespone" type="checkbox">
+      </td>
+    </tr>
+    <tr>
+      <th>アイテムを拾う</th>
+      <td>
+        <label for="isPickup"></label>
+        <input class="command-input" id="isPickup" type="checkbox">
+      </td>
+    </tr>
+    <tr>
+      <th>無音化</th>
+      <td>
+        <label for="isNoSound"></label>
+        <input class="command-input" id="isNoSound" type="checkbox">
+      </td>
+    </tr>
+    <tr>
+      <th>AI無効化</th>
+      <td>
+        <label for="isNoAI"></label>
+        <input class="command-input" id="isNoAI" type="checkbox">
+      </td>
+    </tr>
+    <tr>
+      <th>発光</th>
+      <td>
+        <label for="isLight"></label>
+        <input class="command-input" id="isLight" type="checkbox">
+      </td>
+    </tr>
+    <tr>
+      <th>無重力</th>
+      <td>
+        <label for="isNoGravity"></label>
+        <input class="command-input" id="isNoGravity" type="checkbox">
+      </td>
+    </tr>
+    <tr>
+      <th>左利き</th>
+      <td>
+        <label for="isLeftHand">
+          <input class="command-input" id="isLeftHand" type="checkbox">
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <th>羽装備で滑空</th>
+      <td>
+        <label for="isWithPropeller"></label>
+        <input class="command-input" id="isWithPropeller" type="checkbox">
+      </td>
+    </tr>
+  </table>
+  <b>4. 属性設定</b>
+  <table class="free-table">
+    <tr>
+      <th class="attr"><strong>属性</strong></th>
+      <th><strong>有無</strong></th>
+      <th><strong>値</strong></th>
+    </tr>
+    <tr>
+      <td>最大体力</td>
+      <td>
+        <label>
+          <input name="check" type="checkbox" value="generic.maxHealth">
+        </label>
+      </td>
+      <td>
+        <label>
+          <input class="command-input" name="attr" type="number" value="20.0">
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <td>移動速度</td>
+      <td>
+        <label>
+          <input name="check" type="checkbox" value="generic.movementSpeed">
+        </label>
+      </td>
+      <td>
+        <label>
+          <input class="command-input" name="attr" size="30px" type="number" value="0.7">
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <td>攻撃力</td>
+      <td>
+        <label>
+          <input name="check" type="checkbox" value="generic.attackDamage">
+        </label>
+      </td>
+      <td>
+        <label>
+          <input class="command-input" name="attr" size="30px" type="number" value="2.0">
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <td>ノックバック耐性</td>
+      <td>
+        <label>
+          <input name="check" type="checkbox" value="generic.knockbackResistance">
+        </label>
+      </td>
+      <td>
+        <label>
+          <input class="command-input" name="attr" size="30px" type="number" value="0.0">
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <td>索敵範囲</td>
+      <td>
+        <label>
+          <input name="check" type="checkbox" value="generic.followRange">
+        </label>
+      </td>
+      <td>
+        <label>
+          <input class="command-input" name="attr" size="30px" type="number" value="32".0>
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <td>ゾンビ召喚増援確率(ゾンビ)</td>
+      <td>
+        <label>
+          <input name="check" type="checkbox" value="zombie.spawnReinforcements">
+        </label>
+      </td>
+      <td>
+        <label>
+          <input class="command-input" name="attr" size="30px" type="number" value="0.0">
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <td>ジャンプ力(ウマ)</td>
+      <td>
+        <label>
+          <input name="check" type="checkbox" value="horse.jumpStrength">
+        </label>
+      </td>
+      <td>
+        <label>
+          <input class="command-input" name="attr" size="30px" type="number" value="0.0">
+        </label>
+      </td>
+    </tr>
+  </table>
+  <label>
+    <textarea class="textarea" id="already_input" placeholder="/summon 展開"></textarea>
+  </label>
+  <br>
+  <label>
+    <textarea class="textarea" id="textarea"></textarea>
+  </label>
+  <input onclick="summon()" type="button" class="button" value="コマンド生成">
+  <label>
+    &nbsp;
+    <input onclick="copyClipboard(document.getElementById('textarea'))" value="コマンドコピー">
+  </label>
+</form>
+</body>
+</html>

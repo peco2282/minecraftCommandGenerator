@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>setblock</title>
+  <link href="../css/table.css" rel="stylesheet" type="text/css">
+  <link href="../css/button.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<form id="form">
+  <script rel="script" src="../script/setblock.js" type="text/javascript"></script>
+  <script rel="script" src="/script/utils.js"></script>
+  <b>1. ブロック</b>
+  <table class="free-table block-table">
+    <tbody>
+    <tr>
+      <th class="item_label">ブロック</th>
+      <td class="item">
+        <label>
+          <select id="item">
+            <option value="minecraft:air">air</option>
+            <option value="minecraft:stone">stone</option>
+            <option value="minecraft:grass">grass</option>
+            <option value="minecraft:dirt">dirt</option>
+            <option value="minecraft:cobblestone">cobblestone</option>
+            <option value="minecraft:planks">planks</option>
+            <option value="minecraft:sapling">sapling</option>
+            <option value="minecraft:bedrock">bedrock</option>
+            <option value="minecraft:flowing_water">flowing_water</option>
+            <option value="minecraft:water">water</option>
+            <option value="minecraft:flowing_lava">flowing_lava</option>
+            <option value="minecraft:lava">lava</option>
+            <option value="minecraft:sand">sand</option>
+            <option value="minecraft:gravel">gravel</option>
+            <option value="minecraft:gold_ore">gold_ore</option>
+            <option value="minecraft:iron_ore">iron_ore</option>
+            <option value="minecraft:coal_ore">coal_ore</option>
+            <option value="minecraft:log">log</option>
+            <option value="minecraft:leaves">leaves</option>
+            <option value="minecraft:sponge">sponge</option>
+            <option value="minecraft:glass">glass</option>
+            <option value="minecraft:lapis_ore">lapis_ore</option>
+            <option value="minecraft:lapis_block">lapis_block</option>
+            <option value="minecraft:dispenser">dispenser</option>
+            <option value="minecraft:sandstone">sandstone</option>
+            <option value="minecraft:noteblock">noteblock</option>
+            <option value="minecraft:bed">bed</option>
+            <option value="minecraft:golden_rail">golden_rail</option>
+            <option value="minecraft:detector_rail">detector_rail</option>
+            <option value="minecraft:sticky_piston">sticky_piston</option>
+            <option value="minecraft:web">web</option>
+            <option value="minecraft:tallgrass">tallgrass</option>
+            <option value="minecraft:deadbush">deadbush</option>
+            <option value="minecraft:piston">piston</option>
+            <option value="minecraft:piston_head">piston_head</option>
+            <option value="minecraft:wool">wool</option>
+            <option value="minecraft:piston_extension">piston_extension</option>
+            <option value="minecraft:yellow_flower">yellow_flower</option>
+            <option value="minecraft:red_flower">red_flower</option>
+            <option value="minecraft:brown_mushroom">brown_mushroom</option>
+            <option value="minecraft:red_mushroom">red_mushroom</option>
+            <option value="minecraft:gold_block">gold_block</option>
+            <option value="minecraft:iron_block">iron_block</option>
+            <option value="minecraft:double_stone_slab">double_stone_slab</option>
+            <option value="minecraft:stone_slab">stone_slab</option>
+            <option value="minecraft:brick_block">brick_block</option>
+            <option value="minecraft:tnt">tnt</option>
+            <option value="minecraft:bookshelf">bookshelf</option>
+            <option value="minecraft:mossy_cobblestone">mossy_cobblestone</option>
+            <option value="minecraft:obsidian">obsidian</option>
+            <option value="minecraft:torch">torch</option>
+            <option value="minecraft:fire">fire</option>
+            <option value="minecraft:mob_spawner">mob_spawner</option>
+            <option value="minecraft:oak_stairs">oak_stairs</option>
+            <option value="minecraft:chest">chest</option>
+            <option value="minecraft:redstone_wire">redstone_wire</option>
+            <option value="minecraft:diamond_ore">diamond_ore</option>
+            <option value="minecraft:diamond_block">diamond_block</option>
+            <option value="minecraft:crafting_table">crafting_table</option>
+            <option value="minecraft:wheat">wheat</option>
+            <option value="minecraft:farmland">farmland</option>
+            <option value="minecraft:furnace">furnace</option>
+            <option value="minecraft:lit_furnace">lit_furnace</option>
+            <option value="minecraft:standing_sign">standing_sign</option>
+            <option value="minecraft:wooden_door">wooden_door</option>
+            <option value="minecraft:ladder">ladder</option>
+            <option value="minecraft:rail">rail</option>
+            <option value="minecraft:stone_stairs">stone_stairs</option>
+            <option value="minecraft:wall_sign">wall_sign</option>
+            <option value="minecraft:lever">lever</option>
+            <option value="minecraft:stone_pressure_plate">stone_pressure_plate</option>
+            <option value="minecraft:iron_door">iron_door</option>
+            <option value="minecraft:wooden_pressure_plate">wooden_pressure_plate</option>
+            <option value="minecraft:redstone_ore">redstone_ore</option>
+            <option value="minecraft:lit_redstone_ore">lit_redstone_ore</option>
+            <option value="minecraft:unlit_redstone_torch">unlit_redstone_torch</option>
+            <option value="minecraft:redstone_torch">redstone_torch</option>
+            <option value="minecraft:stone_button">stone_button</option>
+            <option value="minecraft:snow_layer">snow_layer</option>
+            <option value="minecraft:ice">ice</option>
+            <option value="minecraft:snow">snow</option>
+            <option value="minecraft:cactus">cactus</option>
+            <option value="minecraft:clay">clay</option>
+            <option value="minecraft:reeds">reeds</option>
+            <option value="minecraft:jukebox">jukebox</option>
+            <option value="minecraft:fence">fence</option>
+            <option value="minecraft:pumpkin">pumpkin</option>
+            <option value="minecraft:netherrack">netherrack</option>
+            <option value="minecraft:soul_sand">soul_sand</option>
+            <option value="minecraft:glowstone">glowstone</option>
+            <option value="minecraft:portal">portal</option>
+            <option value="minecraft:lit_pumpkin">lit_pumpkin</option>
+            <option value="minecraft:cake">cake</option>
+            <option value="minecraft:unpowered_repeater">unpowered_repeater</option>
+            <option value="minecraft:powered_repeater">powered_repeater</option>
+            <option value="minecraft:stained_glass">stained_glass</option>
+            <option value="minecraft:trapdoor">trapdoor</option>
+            <option value="minecraft:monster_egg">monster_egg</option>
+            <option value="minecraft:stonebrick">stonebrick</option>
+            <option value="minecraft:brown_mushroom_block">brown_mushroom_block</option>
+            <option value="minecraft:red_mushroom_block">red_mushroom_block</option>
+            <option value="minecraft:iron_bars">iron_bars</option>
+            <option value="minecraft:glass_pane">glass_pane</option>
+            <option value="minecraft:melon_block">melon_block</option>
+            <option value="minecraft:pumpkin_stem">pumpkin_stem</option>
+            <option value="minecraft:melon_stem">melon_stem</option>
+            <option value="minecraft:vine">vine</option>
+            <option value="minecraft:fence_gate">fence_gate</option>
+            <option value="minecraft:brick_stairs">brick_stairs</option>
+            <option value="minecraft:stone_brick_stairs">stone_brick_stairs</option>
+            <option value="minecraft:mycelium">mycelium</option>
+            <option value="minecraft:waterlily">waterlily</option>
+            <option value="minecraft:nether_brick">nether_brick</option>
+            <option value="minecraft:nether_brick_fence">nether_brick_fence</option>
+            <option value="minecraft:nether_brick_stairs">nether_brick_stairs</option>
+            <option value="minecraft:nether_wart">nether_wart</option>
+            <option value="minecraft:enchanting_table">enchanting_table</option>
+            <option value="minecraft:brewing_stand">brewing_stand</option>
+            <option value="minecraft:cauldron">cauldron</option>
+            <option value="minecraft:end_portal">end_portal</option>
+            <option value="minecraft:end_portal_frame">end_portal_frame</option>
+            <option value="minecraft:end_stone">end_stone</option>
+            <option value="minecraft:dragon_egg">dragon_egg</option>
+            <option value="minecraft:redstone_lamp">redstone_lamp</option>
+            <option value="minecraft:lit_redstone_lamp">lit_redstone_lamp</option>
+            <option value="minecraft:double_wooden_slab">double_wooden_slab</option>
+            <option value="minecraft:wooden_slab">wooden_slab</option>
+            <option value="minecraft:cocoa">cocoa</option>
+            <option value="minecraft:sandstone_stairs">sandstone_stairs</option>
+            <option value="minecraft:emerald_ore">emerald_ore</option>
+            <option value="minecraft:ender_chest">ender_chest</option>
+            <option value="minecraft:tripwire_hook">tripwire_hook</option>
+            <option value="minecraft:tripwire">tripwire</option>
+            <option value="minecraft:emerald_block">emerald_block</option>
+            <option value="minecraft:spruce_stairs">spruce_stairs</option>
+            <option value="minecraft:birch_stairs">birch_stairs</option>
+            <option value="minecraft:jungle_stairs">jungle_stairs</option>
+            <option value="minecraft:command_block">command_block</option>
+            <option value="minecraft:beacon">beacon</option>
+            <option value="minecraft:cobblestone_wall">cobblestone_wall</option>
+            <option value="minecraft:flower_pot">flower_pot</option>
+            <option value="minecraft:carrots">carrots</option>
+            <option value="minecraft:potatoes">potatoes</option>
+            <option value="minecraft:wooden_button">wooden_button</option>
+            <option value="minecraft:skull">skull</option>
+            <option value="minecraft:anvil">anvil</option>
+            <option value="minecraft:trapped_chest">trapped_chest</option>
+            <option value="minecraft:light_weighted_pressure_plate">light_weighted_pressure_plate</option>
+            <option value="minecraft:heavy_weighted_pressure_plate">heavy_weighted_pressure_plate</option>
+            <option value="minecraft:unpowered_comparator">unpowered_comparator</option>
+            <option value="minecraft:powered_comparator">powered_comparator</option>
+            <option value="minecraft:daylight_detector">daylight_detector</option>
+            <option value="minecraft:redstone_block">redstone_block</option>
+            <option value="minecraft:quartz_ore">quartz_ore</option>
+            <option value="minecraft:hopper">hopper</option>
+            <option value="minecraft:quartz_block">quartz_block</option>
+            <option value="minecraft:quartz_stairs">quartz_stairs</option>
+            <option value="minecraft:activator_rail">activator_rail</option>
+            <option value="minecraft:dropper">dropper</option>
+            <option value="minecraft:stained_hardened_clay">stained_hardened_clay</option>
+            <option value="minecraft:stained_glass_pane">stained_glass_pane</option>
+            <option value="minecraft:leaves2">leaves2</option>
+            <option value="minecraft:log2">log2</option>
+            <option value="minecraft:acacia_stairs">acacia_stairs</option>
+            <option value="minecraft:dark_oak_stairs">dark_oak_stairs</option>
+            <option value="minecraft:slime">slime</option>
+            <option value="minecraft:barrier">barrier</option>
+            <option value="minecraft:iron_trapdoor">iron_trapdoor</option>
+            <option value="minecraft:prismarine">prismarine</option>
+            <option value="minecraft:sea_lantern">sea_lantern</option>
+            <option value="minecraft:hay_block">hay_block</option>
+            <option value="minecraft:carpet">carpet</option>
+            <option value="minecraft:hardened_clay">hardened_clay</option>
+            <option value="minecraft:coal_block">coal_block</option>
+            <option value="minecraft:packed_ice">packed_ice</option>
+            <option value="minecraft:double_plant">double_plant</option>
+            <option value="minecraft:standing_banner">standing_banner</option>
+            <option value="minecraft:wall_banner">wall_banner</option>
+            <option value="minecraft:daylight_detector_inverted">daylight_detector_inverted</option>
+            <option value="minecraft:red_sandstone">red_sandstone</option>
+            <option value="minecraft:red_sandstone_stairs">red_sandstone_stairs</option>
+            <option value="minecraft:double_stone_slab2">double_stone_slab2</option>
+            <option value="minecraft:stone_slab2">stone_slab2</option>
+            <option value="minecraft:spruce_fence_gate">spruce_fence_gate</option>
+            <option value="minecraft:birch_fence_gate">birch_fence_gate</option>
+            <option value="minecraft:jungle_fence_gate">jungle_fence_gate</option>
+            <option value="minecraft:dark_oak_fence_gate">dark_oak_fence_gate</option>
+            <option value="minecraft:acacia_fence_gate">acacia_fence_gate</option>
+            <option value="minecraft:spruce_fence">spruce_fence</option>
+            <option value="minecraft:birch_fence">birch_fence</option>
+            <option value="minecraft:jungle_fence">jungle_fence</option>
+            <option value="minecraft:dark_oak_fence">dark_oak_fence</option>
+            <option value="minecraft:acacia_fence">acacia_fence</option>
+            <option value="minecraft:spruce_door">spruce_door</option>
+            <option value="minecraft:birch_door">birch_door</option>
+            <option value="minecraft:jungle_door">jungle_door</option>
+            <option value="minecraft:acacia_door">acacia_door</option>
+            <option value="minecraft:dark_oak_door">dark_oak_door</option>
+            <option value="minecraft:end_rod">end_rod</option>
+            <option value="minecraft:chorus_plant">chorus_plant</option>
+            <option value="minecraft:chorus_flower">chorus_flower</option>
+            <option value="minecraft:purpur_block">purpur_block</option>
+            <option value="minecraft:purpur_pillar">purpur_pillar</option>
+            <option value="minecraft:purpur_stairs">purpur_stairs</option>
+            <option value="minecraft:purpur_double_slab">purpur_double_slab</option>
+            <option value="minecraft:purpur_slab">purpur_slab</option>
+            <option value="minecraft:end_bricks">end_bricks</option>
+            <option value="minecraft:grass_path">grass_path</option>
+            <option value="minecraft:end_gateway">end_gateway</option>
+            <option value="minecraft:repeating_command_block">repeating_command_block</option>
+            <option value="minecraft:chain_command_block">chain_command_block</option>
+            <option value="minecraft:frosted_ice">frosted_ice</option>
+            <option value="minecraft:magma">magma</option>
+            <option value="minecraft:nether_wart_block">nether_wart_block</option>
+            <option value="minecraft:red_nether_brick">red_nether_brick</option>
+            <option value="minecraft:bone_block">bone_block</option>
+            <option value="minecraft:observer">observer</option>
+            <option value="minecraft:white_shulker_box">white_shulker_box</option>
+            <option value="minecraft:orange_shulker_box">orange_shulker_box</option>
+            <option value="minecraft:magenta_shulker_box">magenta_shulker_box</option>
+            <option value="minecraft:light_blue_shulker_box">light_blue_shulker_box</option>
+            <option value="minecraft:yellow_shulker_box">yellow_shulker_box</option>
+            <option value="minecraft:lime_shulker_box">lime_shulker_box</option>
+            <option value="minecraft:pink_shulker_box">pink_shulker_box</option>
+            <option value="minecraft:gray_shulker_box">gray_shulker_box</option>
+            <option value="minecraft:silver_shulker_box">silver_shulker_box</option>
+            <option value="minecraft:cyan_shulker_box">cyan_shulker_box</option>
+            <option value="minecraft:purple_shulker_box">purple_shulker_box</option>
+            <option value="minecraft:blue_shulker_box">blue_shulker_box</option>
+            <option value="minecraft:brown_shulker_box">brown_shulker_box</option>
+            <option value="minecraft:green_shulker_box">green_shulker_box</option>
+            <option value="minecraft:red_shulker_box">red_shulker_box</option>
+            <option value="minecraft:black_shulker_box">black_shulker_box</option>
+            <option value="minecraft:white_glazed_terracotta">white_glazed_terracotta</option>
+            <option value="minecraft:orange_grazed_terracotta">orange_grazed_terracotta</option>
+            <option value="minecraft:magenta_grazed_terracotta">magenta_grazed_terracotta</option>
+            <option value="minecraft:light_blue_grazed_terracotta">light_blue_grazed_terracotta</option>
+            <option value="minecraft:yellow_grazed_terracotta">yellow_grazed_terracotta</option>
+            <option value="minecraft:lime_grazed_terracotta">lime_grazed_terracotta</option>
+            <option value="minecraft:pink_grazed_terracotta">pink_grazed_terracotta</option>
+            <option value="minecraft:gray_grazed_terracotta">gray_grazed_terracotta</option>
+            <option value="minecraft:silver_grazed_terracotta">silver_grazed_terracotta</option>
+            <option value="minecraft:cyan_grazed_terracotta">cyan_grazed_terracotta</option>
+            <option value="minecraft:purple_grazed_terracotta">purple_grazed_terracotta</option>
+            <option value="minecraft:blue_grazed_terracotta">blue_grazed_terracotta</option>
+            <option value="minecraft:brown_grazed_terracotta">brown_grazed_terracotta</option>
+            <option value="minecraft:green_grazed_terracotta">green_grazed_terracotta</option>
+            <option value="minecraft:red_grazed_terracotta">red_grazed_terracotta</option>
+            <option value="minecraft:black_grazed_terracotta">black_grazed_terracotta</option>
+            <option value="minecraft:concrete">concrete</option>
+            <option value="minecraft:concrete_powder">concrete_powder</option>
+            <option value="minecraft:structure_block">structure_block</option>
+<!--            "以下アイテム"-->
+            <option value="minecraft:iron_shovel">iron_shovel</option>
+            <option value="minecraft:iron_pickaxe">iron_pickaxe</option>
+            <option value="minecraft:iron_axe">iron_axe</option>
+            <option value="minecraft:flint_and_steel">flint_and_steel</option>
+            <option value="minecraft:apple">apple</option>
+            <option value="minecraft:bow">bow</option>
+            <option value="minecraft:arrow">arrow</option>
+            <option value="minecraft:coal">coal</option>
+            <option value="minecraft:diamond">diamond</option>
+            <option value="minecraft:iron_ingot">iron_ingot</option>
+            <option value="minecraft:gold_ingot">gold_ingot</option>
+            <option value="minecraft:iron_sword">iron_sword</option>
+            <option value="minecraft:wooden_sword">wooden_sword</option>
+            <option value="minecraft:wooden_shovel">wooden_shovel</option>
+            <option value="minecraft:wooden_pickaxe">wooden_pickaxe</option>
+            <option value="minecraft:wooden_axe">wooden_axe</option>
+            <option value="minecraft:stone_sword">stone_sword</option>
+            <option value="minecraft:stone_shovel">stone_shovel</option>
+            <option value="minecraft:stone_pickaxe">stone_pickaxe</option>
+            <option value="minecraft:stone_axe">stone_axe</option>
+            <option value="minecraft:diamond_sword">diamond_sword</option>
+            <option value="minecraft:diamond_shovel">diamond_shovel</option>
+            <option value="minecraft:diamond_pickaxe">diamond_pickaxe</option>
+            <option value="minecraft:diamond_axe">diamond_axe</option>
+            <option value="minecraft:stick">stick</option>
+            <option value="minecraft:bowl">bowl</option>
+            <option value="minecraft:mushroom_stew">mushroom_stew</option>
+            <option value="minecraft:golden_sword">golden_sword</option>
+            <option value="minecraft:golden_shovel">golden_shovel</option>
+            <option value="minecraft:golden_pickaxe">golden_pickaxe</option>
+            <option value="minecraft:golden_axe">golden_axe</option>
+            <option value="minecraft:string">string</option>
+            <option value="minecraft:feather">feather</option>
+            <option value="minecraft:gunpowder">gunpowder</option>
+            <option value="minecraft:wooden_hoe">wooden_hoe</option>
+            <option value="minecraft:stone_hoe">stone_hoe</option>
+            <option value="minecraft:iron_hoe">iron_hoe</option>
+            <option value="minecraft:diamond_hoe">diamond_hoe</option>
+            <option value="minecraft:golden_hoe">golden_hoe</option>
+            <option value="minecraft:wheat_seeds">wheat_seeds</option>
+            <option value="minecraft:wheat">wheat</option>
+            <option value="minecraft:bread">bread</option>
+            <option value="minecraft:leather_helmet">leather_helmet</option>
+            <option value="minecraft:leather_chestplate">leather_chestplate</option>
+            <option value="minecraft:leather_leggings">leather_leggings</option>
+            <option value="minecraft:leather_boots">leather_boots</option>
+            <option value="minecraft:chainmail_helmet">chainmail_helmet</option>
+            <option value="minecraft:chainmail_chestplate">chainmail_chestplate</option>
+            <option value="minecraft:chainmail_leggings">chainmail_leggings</option>
+            <option value="minecraft:chainmail_boots">chainmail_boots</option>
+            <option value="minecraft:iron_helmet">iron_helmet</option>
+            <option value="minecraft:iron_chestplate">iron_chestplate</option>
+            <option value="minecraft:iron_leggings">iron_leggings</option>
+            <option value="minecraft:iron_boots">iron_boots</option>
+            <option value="minecraft:diamond_helmet">diamond_helmet</option>
+            <option value="minecraft:diamond_chestplate">diamond_chestplate</option>
+            <option value="minecraft:diamond_leggings">diamond_leggings</option>
+            <option value="minecraft:diamond_boots">diamond_boots</option>
+            <option value="minecraft:golden_helmet">golden_helmet</option>
+            <option value="minecraft:golden_chestplate">golden_chestplate</option>
+            <option value="minecraft:golden_leggings">golden_leggings</option>
+            <option value="minecraft:golden_boots">golden_boots</option>
+            <option value="minecraft:flint">flint</option>
+            <option value="minecraft:porkchop">porkchop</option>
+            <option value="minecraft:cooked_porkchop">cooked_porkchop</option>
+            <option value="minecraft:painting">painting</option>
+            <option value="minecraft:golden_apple">golden_apple</option>
+            <option value="minecraft:sign">sign</option>
+            <option value="minecraft:wooden_door">wooden_door</option>
+            <option value="minecraft:bucket">bucket</option>
+            <option value="minecraft:water_bucket">water_bucket</option>
+            <option value="minecraft:lava_bucket">lava_bucket</option>
+            <option value="minecraft:minecart">minecart</option>
+            <option value="minecraft:saddle">saddle</option>
+            <option value="minecraft:iron_door">iron_door</option>
+            <option value="minecraft:redstone">redstone</option>
+            <option value="minecraft:snowball">snowball</option>
+            <option value="minecraft:boat">boat</option>
+            <option value="minecraft:leather">leather</option>
+            <option value="minecraft:milk_bucket">milk_bucket</option>
+            <option value="minecraft:brick">brick</option>
+            <option value="minecraft:clay_ball">clay_ball</option>
+            <option value="minecraft:reeds">reeds</option>
+            <option value="minecraft:paper">paper</option>
+            <option value="minecraft:book">book</option>
+            <option value="minecraft:slime_ball">slime_ball</option>
+            <option value="minecraft:chest_minecart">chest_minecart</option>
+            <option value="minecraft:furnace_minecart">furnace_minecart</option>
+            <option value="minecraft:egg">egg</option>
+            <option value="minecraft:compass">compass</option>
+            <option value="minecraft:fishing_rod">fishing_rod</option>
+            <option value="minecraft:clock">clock</option>
+            <option value="minecraft:glowstone_dust">glowstone_dust</option>
+            <option value="minecraft:fish">fish</option>
+            <option value="minecraft:cooked_fish">cooked_fish</option>
+            <option value="minecraft:dye">dye</option>
+            <option value="minecraft:bone">bone</option>
+            <option value="minecraft:sugar">sugar</option>
+            <option value="minecraft:cake">cake</option>
+            <option value="minecraft:bed">bed</option>
+            <option value="minecraft:repeater">repeater</option>
+            <option value="minecraft:cookie">cookie</option>
+            <option value="minecraft:filled_map">filled_map</option>
+            <option value="minecraft:shears">shears</option>
+            <option value="minecraft:melon">melon</option>
+            <option value="minecraft:pumpkin_seeds">pumpkin_seeds</option>
+            <option value="minecraft:melon_seeds">melon_seeds</option>
+            <option value="minecraft:beef">beef</option>
+            <option value="minecraft:cooked_beef">cooked_beef</option>
+            <option value="minecraft:chicken">chicken</option>
+            <option value="minecraft:cooked_chicken">cooked_chicken</option>
+            <option value="minecraft:rotten_flesh">rotten_flesh</option>
+            <option value="minecraft:ender_pearl">ender_pearl</option>
+            <option value="minecraft:blaze_rod">blaze_rod</option>
+            <option value="minecraft:ghast_tear">ghast_tear</option>
+            <option value="minecraft:gold_nugget">gold_nugget</option>
+            <option value="minecraft:nether_wart">nether_wart</option>
+            <option value="minecraft:potion">potion</option>
+            <option value="minecraft:glass_bottle">glass_bottle</option>
+            <option value="minecraft:spider_eye">spider_eye</option>
+            <option value="minecraft:fermented_spider_eye">fermented_spider_eye</option>
+            <option value="minecraft:blaze_powder">blaze_powder</option>
+            <option value="minecraft:magma_cream">magma_cream</option>
+            <option value="minecraft:brewing_stand">brewing_stand</option>
+            <option value="minecraft:cauldron">cauldron</option>
+            <option value="minecraft:ender_eye">ender_eye</option>
+            <option value="minecraft:speckled_melon">speckled_melon</option>
+            <option value="minecraft:spawn_egg">spawn_egg</option>
+            <option value="minecraft:experience_bottle">experience_bottle</option>
+            <option value="minecraft:fire_charge">fire_charge</option>
+            <option value="minecraft:writable_book">writable_book</option>
+            <option value="minecraft:written_book">written_book</option>
+            <option value="minecraft:emerald">emerald</option>
+            <option value="minecraft:item_frame">item_frame</option>
+            <option value="minecraft:flower_pot">flower_pot</option>
+            <option value="minecraft:carrot">carrot</option>
+            <option value="minecraft:potato">potato</option>
+            <option value="minecraft:baked_potato">baked_potato</option>
+            <option value="minecraft:poisonous_potato">poisonous_potato</option>
+            <option value="minecraft:map">map</option>
+            <option value="minecraft:golden_carrot">golden_carrot</option>
+            <option value="minecraft:skull">skull</option>
+            <option value="minecraft:carrot_on_a_stick">carrot_on_a_stick</option>
+            <option value="minecraft:nether_star">nether_star</option>
+            <option value="minecraft:pumpkin_pie">pumpkin_pie</option>
+            <option value="minecraft:fireworks">fireworks</option>
+            <option value="minecraft:firework_charge">firework_charge</option>
+            <option value="minecraft:enchanted_book">enchanted_book</option>
+            <option value="minecraft:comparator">comparator</option>
+            <option value="minecraft:netherbrick">netherbrick</option>
+            <option value="minecraft:quartz">quartz</option>
+            <option value="minecraft:tnt_minecart">tnt_minecart</option>
+            <option value="minecraft:hopper_minecart">hopper_minecart</option>
+            <option value="minecraft:prismarine_shard">prismarine_shard</option>
+            <option value="minecraft:prismarine_crystals">prismarine_crystals</option>
+            <option value="minecraft:rabbit">rabbit</option>
+            <option value="minecraft:cooked_rabbit">cooked_rabbit</option>
+            <option value="minecraft:rabbit_stew">rabbit_stew</option>
+            <option value="minecraft:rabbit_foot">rabbit_foot</option>
+            <option value="minecraft:rabbit_hide">rabbit_hide</option>
+            <option value="minecraft:iron_horse_armor">iron_horse_armor</option>
+            <option value="minecraft:golden_horse_armor">golden_horse_armor</option>
+            <option value="minecraft:diamond_horse_armor">diamond_horse_armor</option>
+            <option value="minecraft:lead">lead</option>
+            <option value="minecraft:name_tag">name_tag</option>
+            <option value="minecraft:command_block_minecart">command_block_minecart</option>
+            <option value="minecraft:mutton">mutton</option>
+            <option value="minecraft:cooked_mutton">cooked_mutton</option>
+            <option value="minecraft:banner">banner</option>
+            <option value="minecraft:end_crystal">end_crystal</option>
+            <option value="minecraft:spruce_door">spruce_door</option>
+            <option value="minecraft:birch_door">birch_door</option>
+            <option value="minecraft:jungle_door">jungle_door</option>
+            <option value="minecraft:acacia_door">acacia_door</option>
+            <option value="minecraft:dark_oak_door">dark_oak_door</option>
+            <option value="minecraft:chorus_fruit">chorus_fruit</option>
+            <option value="minecraft:chorus_fruit_popped">chorus_fruit_popped</option>
+            <option value="minecraft:beetroot">beetroot</option>
+            <option value="minecraft:beetroot_seeds">beetroot_seeds</option>
+            <option value="minecraft:beetroot_soup">beetroot_soup</option>
+            <option value="minecraft:dragon_breath">dragon_breath</option>
+            <option value="minecraft:splash_potion">splash_potion</option>
+            <option value="minecraft:spectral_arrow">spectral_arrow</option>
+            <option value="minecraft:tipped_arrow">tipped_arrow</option>
+            <option value="minecraft:lingering_potion">lingering_potion</option>
+            <option value="minecraft:shield">shield</option>
+            <option value="minecraft:elytra">elytra</option>
+            <option value="minecraft:spruce_boat">spruce_boat</option>
+            <option value="minecraft:birch_boat">birch_boat</option>
+            <option value="minecraft:jungle_boat">jungle_boat</option>
+            <option value="minecraft:acacia_boat">acacia_boat</option>
+            <option value="minecraft:dark_oak_boat">dark_oak_boat</option>
+            <option value="minecraft:totem_of_undying">totem_of_undying</option>
+            <option value="minecraft:shulker_shell">shulker_shell</option>
+            <option value="minecraft:record_13">record_13</option>
+            <option value="minecraft:record_cat">record_cat</option>
+            <option value="minecraft:record_blocks">record_blocks</option>
+            <option value="minecraft:record_chirp">record_chirp</option>
+            <option value="minecraft:record_far">record_far</option>
+            <option value="minecraft:record_mall">record_mall</option>
+            <option value="minecraft:record_mellohi">record_mellohi</option>
+            <option value="minecraft:record_stal">record_stal</option>
+            <option value="minecraft:record_strad">record_strad</option>
+            <option value="minecraft:record_ward">record_ward</option>
+            <option value="minecraft:record_11">record_11</option>
+            <option value="minecraft:record_wait">record_wait</option>
+          </select>
+        </label>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <br>
+  <b>2. 座標設定</b>
+  <table class="free-table relative">
+    <thead>
+    <tr>
+      <th>軸</th>
+      <th class="relative_num">値</th>
+      <th class="relative_check">絶対座標か否か</th>
+    </tr>
+    </thead>
+    <tr>
+      <th>X座標</th>
+      <td>
+        <label>
+          <input class="command-input" name="pos" type="number" value="0">
+        </label>
+      </td>
+      <td>
+        <label>
+          <input class="command-input" name="isRelative" type="checkbox">
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <th>Y座標</th>
+      <td>
+        <label>
+          <input class="command-input" name="pos" type="number" value="0">
+        </label>
+      </td>
+      <td>
+        <label>
+          <input class="command-input" name="isRelative" type="checkbox">
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <th>Z座標</th>
+      <td>
+        <label>
+          <input class="command-input" name="pos" type="number" value="0">
+        </label>
+      </td>
+      <td>
+        <label>
+          <input class="command-input" name="isRelative" type="checkbox">
+        </label>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <b>3. 方法</b>
+  <table class="free-table way">
+    <tbody>
+    <tr>
+      <th rowspan="3">方法</th>
+      <td>
+        <label>
+          <input name="way" type="radio" value="replace">置き換え
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>
+          <input name="way" type="radio" value="destroy">前ブロックを破壊
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>
+          <input name="way" type="radio" value="keep">ブロックが無い時のみ
+        </label>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <br>
+  <label for="textarea">
+    <textarea class="textarea" id="textarea"></textarea>
+  </label>
+  <br>
+  <input type="button" class="button" onclick="setblock()" value="コマンド生成">
+  &nbsp;
+  <input type="button" class="button" onclick="copyClipboard(document.getElementById('textarea'))" value="コマンドコピー">
+</form>
+</body>
+</html>
